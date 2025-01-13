@@ -89,7 +89,7 @@ Run the script with the following syntax:
 5. **Use the output directly with ffuf for brute-force testing:**
 
    ```bash
-   ./ffuf_basicauth.sh -U usernames.txt -P passwords.txt | ffuf -w -:AUTH -u https://example.com/login -H "Authorization: Basic AUTH" -mc all -c -enc AUTH:b64encode
+   ./ffuf_basicauth.sh -U usernames.txt -P passwords.txt | ffuf -w -:FUZZ -u https://example.com/login -H "Authorization: Basic FUZZ" -enc FUZZ:b64encode -c -mc all
    ```
 
 ---
